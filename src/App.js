@@ -1,5 +1,7 @@
+import Pages from './pages/Pages/Pages';
+
 function App() {
-	return <h1>hello app</h1>;
+	return <Pages />;
 }
 
 export default App;
