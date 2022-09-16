@@ -9,7 +9,7 @@ const Header = () => {
 		);
 
 		const data = await res.json();
-		console.log(data);
+		// console.log(data);
 		setRandomRecipe(data.recipes);
 	};
 
@@ -26,6 +26,9 @@ const Header = () => {
 					</div>
 					<div className='header-desc'>
 						<h1>{recipe.title}</h1>
+						<button className='recipe-type'>
+							{recipe.dishTypes}
+						</button>
 						<p
 							dangerouslySetInnerHTML={{
 								__html: recipe.summary.slice(0, 200),
