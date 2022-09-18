@@ -21,7 +21,7 @@ const LatestRecipe = () => {
 	}, []);
 
 	return (
-		<section>
+		<section className='latest-recipe'>
 			<h2 className='section-title'>Latest Recipe</h2>
 
 			{latestRecipe.map((recipe) => (
