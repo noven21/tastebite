@@ -5,13 +5,20 @@ const DessertRecipe = () => {
 	const [dessertRecipe, setDessertRecipe] = useState([]);
 
 	const getDessertRecipe = async () => {
-		const res = await fetch(
-			`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_RECIPE_API_KEY}&number=3&tags=dessert`
-		);
+		const check = localStorage.getItem('dessert');
 
-		const data = await res.json();
-		console.log(data);
-		setDessertRecipe(data.recipes);
+		if (check) {
+			setDessertRecipe(JSON.parse(check));
+		} else {
+			const res = await fetch(
+				`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_RECIPE_API_KEY}&number=3&tags=dessert`
+			);
+
+			const data = await res.json();
+			localStorage.setItem('dessert', JSON.stringify(data.recipes));
+			// console.log(data);
+			setDessertRecipe(data.recipes);
+		}
 	};
 
 	useEffect(() => {
