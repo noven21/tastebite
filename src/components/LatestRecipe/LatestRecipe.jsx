@@ -12,7 +12,7 @@ const LatestRecipe = () => {
 		);
 
 		const data = await res.json();
-		console.log(data);
+		// console.log(data);
 		setLatestRecipe(data.recipes);
 	};
 
@@ -26,7 +26,7 @@ const LatestRecipe = () => {
 
 			{latestRecipe.map((recipe) => (
 				<div className='latest' key={recipe.id}>
-					<div>
+					<div className='latest-item'>
 						<img src={recipe.image} alt='' />
 						<div>
 							<button className='recipe-type'>

@@ -32,3 +32,9 @@
 	margin-left: 5px;
 	color: var(--red-100);
 }
+
+.latest-item {
+	border: 2px solid var(--grey-200);
+	border-radius: 10px;
+	padding: 10px;
+}
