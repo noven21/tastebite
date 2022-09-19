@@ -1,7 +1,14 @@
-import Pages from './pages/Pages/Pages';
+import Pages from './routes/Pages/Pages';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
-	return <Pages />;
+	return (
+		<div>
+			<Router>
+				<Pages />
+			</Router>
+		</div>
+	);
 }
 
 export default App;

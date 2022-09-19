@@ -1,0 +1,27 @@
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-top: 2px solid var(--red-100);
+	padding: 10px 0;
+}
+
+.text-bold {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+	.footer {
+		padding: 10px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.footer {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+}

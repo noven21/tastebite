@@ -41,7 +41,9 @@ const LatestRecipe = () => {
 							<div className='recipe-info'>
 								<h4>
 									<span className='text-sm'>created by </span>{' '}
-									{recipe.sourceName}
+									<span className='text-red'>
+										{recipe.sourceName}
+									</span>
 								</h4>
 								<span className='recipe-aic'>
 									{recipe.readyInMinutes} min{' '}

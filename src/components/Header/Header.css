@@ -34,6 +34,15 @@
 }
 
 /* media query */
+
+/* tablet screen */
+@media only screen and (max-width: 1024px) {
+	header {
+		padding: 0 10px;
+	}
+}
+
+/* small screen */
 @media only screen and (max-width: 480px) {
 	.header {
 		display: grid;

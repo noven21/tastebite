@@ -39,6 +39,20 @@
 	padding: 10px;
 }
 
+.text-red {
+	color: var(--red-100);
+}
+
+@media only screen and (max-width: 1024px) {
+	.latest-recipe {
+		padding: 0 10px;
+	}
+	.latest {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
 @media only screen and (max-width: 480px) {
 	.latest-recipe {
 		padding: 10px;

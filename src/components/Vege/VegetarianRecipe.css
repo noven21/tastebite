@@ -1,0 +1,32 @@
+.vege {
+	margin: 50px auto;
+}
+
+.vege-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+}
+
+.vege-item > img {
+	width: 100%;
+	height: 150px;
+}
+
+@media only screen and (max-width: 1024px) {
+	.vege {
+		padding: 0 10px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.vege {
+		padding: 0 15px;
+	}
+
+	.vege-grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 25px;
+	}
+}
