@@ -12,7 +12,7 @@ const Searched = () => {
 		const recipes = await res.json();
 		setSearchedRecipe(recipes.results);
 
-		console.log(recipes);
+		// console.log(recipes);
 	};
 
 	useEffect(() => {

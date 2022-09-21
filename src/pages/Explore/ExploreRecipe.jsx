@@ -10,7 +10,6 @@ const ExploreRecipe = () => {
 			<Navbar />
 			<Search />
 			<Category />
-			<Footer />
 		</div>
 	);
 };
