@@ -6,6 +6,7 @@
 	gap: 2rem;
 	background-color: var(--blue-100);
 }
+
 .recipe-type {
 	border-radius: 25px;
 	padding: 5px;
@@ -22,9 +23,9 @@
 	margin-top: 20px;
 }
 
-.header-desc > h1 {
+.header-desc > a {
 	font-family: 'Playfair Display', serif;
-	font-size: 48px;
+	font-size: 35px;
 	margin-bottom: 5px;
 }
 

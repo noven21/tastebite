@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -25,7 +26,9 @@ const Header = () => {
 						<img src={recipe.image} alt={recipe.image} />
 					</div>
 					<div className='header-desc'>
-						<h1>{recipe.title}</h1>
+						<Link to={'/recipe-details/' + recipe.id}>
+							<h1>{recipe.title}</h1>
+						</Link>
 						<button className='recipe-type'>
 							{recipe.dishTypes}
 						</button>

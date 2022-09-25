@@ -22,3 +22,8 @@ body {
 	--grey-200: #e8e8e8;
 	--grey-300: #f9f9f9;
 }
+
+a {
+	text-decoration: none;
+	color: var(--black-100);
+}
