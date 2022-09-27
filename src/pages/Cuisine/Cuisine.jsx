@@ -34,7 +34,9 @@ const Cuisine = () => {
 					<div key={recipe.id}>
 						<img src={recipe.image} alt='' />
 
-						<h3 className='recipe-title'>{recipe.title}</h3>
+						<Link to={'/recipe-details/' + recipe.id}>
+							<h3 className='recipe-title'>{recipe.title}</h3>
+						</Link>
 					</div>
 				))}
 			</div>

@@ -11,7 +11,7 @@ const Search = () => {
 		e.preventDefault();
 		console.log(input);
 
-		navigate('/searched/' + input);
+		navigate('/explore-recipe/searched/' + input);
 	};
 
 	return (

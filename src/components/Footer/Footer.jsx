@@ -10,7 +10,7 @@ const Footer = () => {
 					<span className='text-bold'> N.L</span> ,all rights reserved
 				</p>
 				<p>
-					Designed by <span className='text-bold'>Fabrx</span>{' '}
+					Design by <span className='text-bold'>Fabrx</span>{' '}
 				</p>
 			</div>
 			<div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BiAlarm } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 import FreshRecipe from '../FreshRecipe/FreshRecipe';
 import './LatestRecipe.css';
 
@@ -32,7 +33,12 @@ const LatestRecipe = () => {
 							<button className='recipe-type'>
 								{recipe.dishTypes}
 							</button>
-							<h2>{recipe.title}</h2>
+							<Link
+								href='#recipe-details'
+								to={'/recipe-details/' + recipe.id}
+							>
+								<h2>{recipe.title}</h2>
+							</Link>
 							<p
 								dangerouslySetInnerHTML={{
 									__html: recipe.summary.slice(0, 200),

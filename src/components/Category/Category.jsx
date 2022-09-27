@@ -16,39 +16,39 @@ const Category = () => {
 		<section className='category'>
 			<h2 className='section-title'>Popular Categories</h2>
 			<div className='category-items'>
-				<Link to={'/cuisine/Italian'}>
+				<Link to={'/explore-recipe/cuisine/Italian'}>
 					<div className='category-item'>
 						<img src={Italian} alt='Italian' />
 						<h4>Italian</h4>
 					</div>
 				</Link>
-				<Link to={'/cuisine/Chinese'}>
+				<Link to={'/explore-recipe/cuisine/Chinese'}>
 					<div className='category-item'>
 						<img src={Chinese} alt='Chinese' />
 						<h4>Chinese</h4>
 					</div>
 				</Link>
-				<Link to={'/cuisine/French'}>
+				<Link to={'/explore-recipe/cuisine/French'}>
 					<div className='category-item'>
 						<img src={French} alt='French' />
 						<h4>French</h4>
 					</div>
 				</Link>
 
-				<Link to={'/cuisine/Indian'}>
+				<Link to={'/explore-recipe/cuisine/Indian'}>
 					<div className='category-item'>
 						<img src={Indian} alt='Indian' />
 						<h4>Indian</h4>
 					</div>
 				</Link>
 
-				<Link to={'/cuisine/Spanish'}>
+				<Link to={'/explore-recipe/cuisine/Spanish'}>
 					<div className='category-item'>
 						<img src={Spanish} alt='Spanish' />
 						<h4>Spanish</h4>
 					</div>
 				</Link>
-				<Link to={'/cuisine/Thai'}>
+				<Link to={'/explore-recipe/cuisine/Thai'}>
 					<div className='category-item'>
 						<img src={Thai} alt='Thai' />
 						<h4>Thai</h4>

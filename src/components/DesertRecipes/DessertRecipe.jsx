@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './DessertRecipe.css';
 
 const DessertRecipe = () => {
@@ -38,7 +39,9 @@ const DessertRecipe = () => {
 						<button className='recipe-type'>
 							{recipe.dishTypes}
 						</button>
-						<h3 className='recipe-title'>{recipe.title}</h3>
+						<Link to={'/recipe-details/' + recipe.id}>
+							<h3 className='recipe-title'>{recipe.title}</h3>
+						</Link>
 					</div>
 				))}
 			</section>

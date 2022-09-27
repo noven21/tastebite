@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './FreshRecipe.css';
 
 const FreshRecipe = () => {
@@ -33,8 +34,12 @@ const FreshRecipe = () => {
 				{freshRecipe.map((recipe) => (
 					<div key={recipe.id} className='fresh-recipe__item'>
 						<img src={recipe.image} alt='' />
-
-						<h3>{recipe.title}</h3>
+						<Link
+							href='#recipe-details'
+							to={'/recipe-details/' + recipe.id}
+						>
+							<h3>{recipe.title}</h3>
+						</Link>
 					</div>
 				))}
 			</div>

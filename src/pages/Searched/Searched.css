@@ -1,0 +1,22 @@
+.searched-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+	.searched-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		padding: 0 50px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.searched-grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		justify-content: center;
+	}
+}

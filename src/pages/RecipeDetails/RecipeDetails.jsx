@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from '../../components/Nav/Navbar';
 import Footer from '../../components/Footer/Footer';
+import LatestRecipe from '../../components/LatestRecipe/LatestRecipe';
 import { BiLike, BiAlarm } from 'react-icons/bi';
 import { BsFillPeopleFill } from 'react-icons/bs';
 import { MdFastfood } from 'react-icons/md';
@@ -28,7 +29,7 @@ const RecipeDetails = () => {
 	return (
 		<section>
 			<Navbar />
-			<div className='recipe-details'>
+			<div id='recipe-details' className='recipe-details'>
 				<h2 className='lg-title-recipe'>{recipeDetails.title}</h2>
 				<div className='flex-aic first-details'>
 					<h4 className='mr-md'>
@@ -84,7 +85,11 @@ const RecipeDetails = () => {
 						<div>
 							<h4 className='color-grey'>Cuisine Type</h4>
 							<div className='flex-aic'>
-								<p>{recipeDetails.cuisines}</p>
+								<p>
+									{recipeDetails.cuisines
+										? recipeDetails.cuisines
+										: 'N/A'}
+								</p>
 							</div>
 						</div>
 					</div>
@@ -118,7 +123,7 @@ const RecipeDetails = () => {
 							Ingredients
 						</button>
 					</div>
-					<div>
+					<div className='recipe-details-main'>
 						{activeTab === 'instructions' && (
 							<div>
 								{recipeDetails.analyzedInstructions.map(
@@ -145,6 +150,7 @@ const RecipeDetails = () => {
 					</div>
 				</div>
 			</div>
+			<LatestRecipe />
 			<Footer />
 		</section>
 	);
