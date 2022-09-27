@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useSearched } from '../../hooks/useFetch';
 import './Search.css';
 
 const Search = () => {
-	const [input, setInput] = useState('');
-	const navigate = useNavigate();
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		console.log(input);
-
-		navigate('/explore-recipe/searched/' + input);
-	};
+	const { input, setInput, handleSubmit } = useSearched();
 
 	return (
 		<form onSubmit={handleSubmit}>

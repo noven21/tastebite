@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../img/logo.png';
+import Logo from '../../assets/img/logo.png';
 import { FiArrowRight } from 'react-icons/fi';
 
 import './Navbar.css';

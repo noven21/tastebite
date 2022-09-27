@@ -27,3 +27,7 @@ a {
 	text-decoration: none;
 	color: var(--black-100);
 }
+
+a:hover {
+	color: var(--red-100);
+}

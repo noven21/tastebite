@@ -9,9 +9,6 @@ const Footer = () => {
 					&copy; 2022
 					<span className='text-bold'> N.L</span> ,all rights reserved
 				</p>
-				<p>
-					Design by <span className='text-bold'>Fabrx</span>{' '}
-				</p>
 			</div>
 			<div>
 				<p>

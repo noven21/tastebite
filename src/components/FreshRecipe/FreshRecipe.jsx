@@ -1,31 +1,10 @@
-import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useFreshRecipe } from '../../hooks/useFetch';
+
 import './FreshRecipe.css';
 
 const FreshRecipe = () => {
-	const [freshRecipe, setFreshRecipe] = useState([]);
-
-	const getFreshRecipe = async () => {
-		const check = localStorage.getItem('fresh');
-
-		if (check) {
-			setFreshRecipe(JSON.parse(check));
-		} else {
-			const res = await fetch(
-				`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_RECIPE_API_KEY}&number=6`
-			);
-
-			const data = await res.json();
-			localStorage.setItem('fresh', JSON.stringify(data.recipes));
-
-			console.log(data);
-			setFreshRecipe(data.recipes);
-		}
-	};
-
-	useEffect(() => {
-		getFreshRecipe();
-	}, []);
+	const { freshRecipe } = useFreshRecipe();
 
 	return (
 		<section className='fresh-recipe'>

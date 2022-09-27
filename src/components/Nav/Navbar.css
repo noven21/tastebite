@@ -14,11 +14,14 @@
 	display: flex;
 	align-items: center;
 	border: none;
-	background-color: transparent;
+	background: none;
 	padding: 5px;
-	font-size: 28px;
-
+	font-size: 25px;
 	cursor: pointer;
+}
+
+.navbar .explore-btn:hover {
+	color: var(--red-100);
 }
 
 @media only screen and (max-width: 1024px) {

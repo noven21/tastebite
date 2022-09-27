@@ -1,30 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './DessertRecipe.css';
+import { useDessertRecipe } from '../../hooks/useFetch';
 
 const DessertRecipe = () => {
-	const [dessertRecipe, setDessertRecipe] = useState([]);
-
-	const getDessertRecipe = async () => {
-		const check = localStorage.getItem('dessert');
-
-		if (check) {
-			setDessertRecipe(JSON.parse(check));
-		} else {
-			const res = await fetch(
-				`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_RECIPE_API_KEY}&number=3&tags=dessert`
-			);
-
-			const data = await res.json();
-			localStorage.setItem('dessert', JSON.stringify(data.recipes));
-			// console.log(data);
-			setDessertRecipe(data.recipes);
-		}
-	};
-
-	useEffect(() => {
-		getDessertRecipe();
-	}, []);
+	const { dessertRecipe } = useDessertRecipe();
 
 	return (
 		<main className='dessert'>

@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { useHeaderRecipe } from '../../hooks/useFetch';
 import './Header.css';
 
 const Header = () => {
-	const [randomRecipe, setRandomRecipe] = useState([]);
-	const getRandomRecipe = async () => {
-		const res = await fetch(
-			`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_RECIPE_API_KEY}&number=1`
-		);
-
-		const data = await res.json();
-		// console.log(data);
-		setRandomRecipe(data.recipes);
-	};
-
-	useEffect(() => {
-		getRandomRecipe();
-	}, []);
+	const { randomRecipe } = useHeaderRecipe();
 
 	return (
 		<header>

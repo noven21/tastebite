@@ -1,30 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useVegeRecipe } from '../../hooks/useFetch';
 import './VegetarianRecipe.css';
 
 const VegetarianRecipe = () => {
-	const [vegeRecipe, setVegeRecipe] = useState([]);
-
-	const getVegeRecipe = async () => {
-		const check = localStorage.getItem('vege');
-
-		if (check) {
-			setVegeRecipe(JSON.parse(check));
-		} else {
-			const res = await fetch(
-				`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_RECIPE_API_KEY}&number=3&tags=vegetarian`
-			);
-
-			const data = await res.json();
-			console.log(data);
-			localStorage.setItem('vege', JSON.stringify(data.recipes));
-			setVegeRecipe(data.recipes);
-		}
-	};
-
-	useEffect(() => {
-		getVegeRecipe();
-	}, []);
+	const { vegeRecipe } = useVegeRecipe();
 
 	return (
 		<section className='vege'>
