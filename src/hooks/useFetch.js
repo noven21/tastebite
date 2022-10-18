@@ -64,11 +64,14 @@ export const useFreshRecipe = () => {
 // useHeaderRecipe
 export const useHeaderRecipe = () => {
 	const [randomRecipe, setRandomRecipe] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
+
 	const getRandomRecipe = async () => {
 		const res = await fetch(getHeaderRecipeApi);
 
 		const data = await res.json();
-		// console.log(data);
+		// console.log(data)
+		setIsLoading(false);
 		setRandomRecipe(data.recipes);
 	};
 
@@ -78,6 +81,7 @@ export const useHeaderRecipe = () => {
 
 	return {
 		randomRecipe,
+		isLoading,
 	};
 };
 

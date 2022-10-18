@@ -4,10 +4,11 @@ import { useHeaderRecipe } from '../../hooks/useFetch';
 import './Header.css';
 
 const Header = () => {
-	const { randomRecipe } = useHeaderRecipe();
+	const { randomRecipe, isLoading } = useHeaderRecipe();
 
 	return (
 		<header>
+			{isLoading && <div>Loading Recipe...</div>}
 			{randomRecipe.map((recipe) => (
 				<div className='header ' key={recipe.id}>
 					<div className='header-img'>

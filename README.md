@@ -2,7 +2,5 @@
 
 <br />
 <p> Tastebite is a great place to Search food recipes. you can view different dishes and cuisine types.</p>
-
 <br />
-
-<a href="https://tastebite-goods.netlify.app/">DEMO </a>
+<a href="https://tastebite-goods.netlify.app/" target="_blank">DEMO </a>
