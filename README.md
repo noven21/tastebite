@@ -12,4 +12,4 @@
 
 <p>Home</p>
 
-[![Home][header-home]](https://github.com/noven21/tastebite/blob/7730b3f14ce89b0c673fce978662b541c95d3a41/src/assets/img/heading-recipe.png)
+[![Home]](https://github.com/noven21/tastebite/blob/master/src/assets/img/heading-recipe.png)
