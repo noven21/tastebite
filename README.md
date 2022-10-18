@@ -20,4 +20,7 @@ Tastebite is a great place to Search food recipes. you can view different dishes
 
 ### Built with
 
-- [![React][react.js]](https://cdn.hashnode.com/res/hashnode/image/upload/v1622008722227/ResNcwZyph.png)
+- [![React][react.js]][react-url]
+- [![React-Router-DOM][react-router]][react-router-url]
+- [![CSS][css]][css-url]
+- [![Spoonacular-API][spoonacular-api]][spoonacular-url]
