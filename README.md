@@ -16,5 +16,4 @@ Tastebite is a great place to Search food recipes. you can view different dishes
 | :------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
 | ![Home](https://github.com/noven21/tastebite/blob/master/src/assets/img/heading-recipe.png)  | ![Recipe-Details](https://github.com/noven21/tastebite/blob/master/src/assets/img/heading-recipedetails.png) |
 |                                        Search Recipe                                         |                                                 Recipe Info                                                  |
-| :-----------------------------------------------------------------------------------------:  | :----------------------------------------------------------------------------------------------------------: |
 | ![Search](https://github.com/noven21/tastebite/blob/master/src/assets/img/explorerecipe.png) |      ![Recipe-info](https://github.com/noven21/tastebite/blob/master/src/assets/img/recipedetails.png)       |
